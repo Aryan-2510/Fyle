@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Profile</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div id="profile">
+      <img id="userImage" src="" alt="User Image" />
+      <div id="userDetails">
+        <h2 id="userName"></h2>
+        <p id="userDetails"></p>
+        <div id="profileLink"></div>
+      </div>
+    </div>
+
+    <div id="repositories"></div>
+
+    <div id="perPageSelectContainer">
+      <select id="perPageSelect" onchange="changePerPage(this.value)"></select>
+    </div>
+
+    <div id="pagination"></div>
+
+    <div id="pagination-bar"></div>
+
+    <div id="pagination-container">
+      <button
+        class="pagination-button"
+        id="olderBtn"
+        onclick="navigatePage('older')"
+        
+      >
+        <span class="pagination-arrow">&#8592;</span> Older
+      </button>
+      <button
+        class="pagination-button"
+        id="newerBtn"
+        onclick="navigatePage('newer')"
+        
+      >
+        Newer <span class="pagination-arrow">&#8594;</span>
+      </button>
+    </div>
+
+    <div id="loader"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
